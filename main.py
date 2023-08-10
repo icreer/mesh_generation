@@ -1,8 +1,7 @@
 '''
 
 '''
-import numpy as np
-import pyvista as vista 
+
 import threading 
 
 from generation.mesh import Mesh
