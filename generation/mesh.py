@@ -8,13 +8,12 @@ from generation.D2 import Generation2
 from generation.D3 import Generation3
 
 class Mesh():
-    def __init__(self, option):
-        demenstion = option[0]
-        shape = option[1]
+    def __init__(self, dimention, shape, mesh_number):
+        self.dimention = dimention
+        self.shape = shape
+        self.number = mesh_number
 
-    def shapes(self):
-        pass
-    def demensions(self):
+    def generate(self):
         pass
     def show(self):
         pass
