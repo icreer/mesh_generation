@@ -24,14 +24,15 @@ def option():
         creation.append((dementions,shape))
         n+=1
 
-    return (creation , number_to_make)
+    return creation , number_to_make
 
 def main():
-    create = option()
+    create , number = option()
     print(create)
+    print(number)
     meshes = []
-    for x in range(create[1]):
-        meshes.append(Mesh(create[0][0],create[0][1], x))
+    for x in create:
+        meshes.append(Mesh(x[0], x[1],number))
     
     for m in meshes:
         m.generate()

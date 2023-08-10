@@ -4,7 +4,7 @@ This program is for mesh generation using pyvista. You can create and save as ma
 ## Mesh that can be Generated
 ### 2-D Shapes
 - Square
-- Cirle 
+- Circle 
 - Octagon 
 - Equlatral Triangle 
 

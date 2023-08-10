@@ -14,7 +14,14 @@ class Mesh():
         self.number = mesh_number
 
     def generate(self):
-        pass
+        print("works")
+        if self.dimention == 2:
+            Generation2(self.shape)
+        elif self.dimention == 3:
+            Generation3(self.shape)
+        else:
+            print(f"Can't develp a {self.dimention}-D Mesh ")
+        
     def show(self):
         pass
 
