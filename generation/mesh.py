@@ -4,8 +4,8 @@ This file is for holding the class called mesh witch is were all the simulares b
 
 import numpy as np
 import pyvista as vista 
-from D2 import Generation2
-from D3 import Generation3
+from generation.D2 import Generation2
+from generation.D3 import Generation3
 
 class Mesh():
     def __init__(self, option):

@@ -4,7 +4,7 @@
 import numpy as np
 import pyvista as vista 
 
-from mesh import Mesh
+from generation.mesh import Mesh
 
 
 def option():
