@@ -33,6 +33,9 @@ def cube():
     return box
 
 def sphere():
+    '''
+    This creates two sphere in each of each other. Next step is figuring out how to not make it just one cell
+    '''
 
     number_of_points = 100
     outer_factor = 1
