@@ -18,11 +18,9 @@ def Generation3(shape):
     return mesh
 
 def cube():
-    c = vista.Box()
-    p = vista.Plotter(shape=(1,1))
-    p.subplot(0,0)
-    p.add_mesh(c, color='lightblue', show_edges=True)
-
+    '''
+    Create a 2x2x2 cube as of right now can't edit that
+    '''
     points = [[1,1,1],[1,-1,1],
               [-1,1,1],[-1,-1,1],
               [1,1,-1],[1,-1,-1],
