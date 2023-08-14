@@ -35,8 +35,9 @@ def cube():
 def sphere():
     '''
     This creates two sphere in each of each other. Next step is figuring out how to not make it just one cell
+    Remember that cell is a factor of points to faces
     '''
-
+    # mesh points
     number_of_points = 100
     outer_factor = 1
     inter_facotr = 0.95
@@ -48,5 +49,13 @@ def sphere():
         
     print(outer_points)
     print(inter_points)
+
+    # mesh faces
+    # the number of faces will depend on what the cell shape that exist 
+    square = 6/8
+    number_of_faces = int(number_of_faces * square)
+
+    faces = np.hstack([])
+
 
     return 0
