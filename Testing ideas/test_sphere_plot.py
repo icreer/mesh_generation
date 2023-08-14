@@ -17,7 +17,8 @@ for i in range(number_of_points):
     for k in range(number_of_points):
         x.append(outer_factor*np.cos((k*2*np.pi)/number_of_points))
         y.append(outer_factor*np.sin((k*2*np.pi)/number_of_points))
-        z.append(outer_factor*np.tan((i*2*np.pi)/(number_of_points)))
+        #z.append(outer_factor*np.tan((k*2*np.pi)/(number_of_points)))
+        z.append(outer_factor*np.sqrt((outer_factor*np.cos((k*2*np.pi)/number_of_points))**2 + (outer_factor*np.sin((k*2*np.pi)/number_of_points))**2 ))
 
 ax.scatter(x,y,z)
 plt.show()
