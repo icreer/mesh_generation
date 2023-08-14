@@ -1,5 +1,5 @@
 '''
-
+This file is the is the main file that cotrals all the action the the mesh files do. 
 '''
 
 import threading 
@@ -27,14 +27,17 @@ def option():
 
 def main():
     create , number = option()
-    print(create)
-    print(number)
+    
     meshes = []
-    for x in create:
-        meshes.append(Mesh(x[0], x[1],number))
+    for x in range(len(create)):
+        
+        meshes.append(Mesh(create[x][0], create[x][1],x+1))
     
     for m in meshes:
         m.generate()
+    
+    for m in meshes:
+        m.show()
 
 
 if __name__ == '__main__':
