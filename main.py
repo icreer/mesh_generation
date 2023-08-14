@@ -23,10 +23,10 @@ def option():
         creation.append((dementions,shape))
         n+=1
 
-    return creation , number_to_make
+    return creation
 
 def main():
-    create , number = option()
+    create = option()
     
     meshes = []
     for x in range(len(create)):

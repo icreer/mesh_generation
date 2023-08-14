@@ -23,7 +23,10 @@ def cube():
     p.subplot(0,0)
     p.add_mesh(c, color='lightblue', show_edges=True)
 
-    points = [[1,1,1],[1,-1,1],[-1,1,1],[1,1,-1],[-1,-1,1],[-1,-1,-1],[1,-1,-1],[-1,1,-1]]
+    points = [[1,1,1],[1,-1,1],
+              [-1,1,1],[-1,-1,1],
+              [1,1,-1],[1,-1,-1],
+              [-1,1,-1],[-1,-1,-1]]
 
     cells = [len(points)] + list(range(len(points)))
 
