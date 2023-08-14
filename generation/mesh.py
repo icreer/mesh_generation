@@ -24,9 +24,7 @@ class Mesh():
     def show(self):
         print(self.mesh)
         if self.mesh != 0:
-            plotter = vista.Plotter()
-            plotter.add_mesh(self.mesh)
-            plotter.show()
+            vista.examples.cells.plot_cell(self.mesh)
         else:
             print(f"Was not able to generate mesh number {self.number}")
 
