@@ -3,6 +3,7 @@ This file is for holding the class called mesh witch is were all the simulares b
 '''
 
 import pyvista as vista
+import numpy as np
 from generation.D2 import Generation2
 from generation.D3 import Generation3
 
@@ -22,9 +23,18 @@ class Mesh():
             print(f"Can't develp a {self.dimention}-D Mesh ")
         
     def show(self):
-        print(self.mesh)
-        if self.mesh != 0:
+        #print(self.mesh)
+        #if self.mesh != 0:
+            #vista.examples.cells.plot_cell(self.mesh)
+        #else:
+            #print(f"Was not able to generate mesh number {self.number}")
+
+        try: 
             vista.examples.cells.plot_cell(self.mesh)
-        else:
-            print(f"Was not able to generate mesh number {self.number}")
+        except:
+            self.mesh.plot(scalars=np.arange(100),
+                cpos=[-1, 1, 0.5],
+                show_scalar_bar=False,
+                show_edges=True,
+                line_width=5,)
 

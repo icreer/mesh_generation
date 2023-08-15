@@ -43,19 +43,25 @@ def sphere():
     inter_facotr = 0.95
     outer_points = []
     inter_points = []
+    m = 2*np.pi / number_of_points # multiplication factor 
+
     for i in range(number_of_points):
-        outer_points.append([outer_factor*np.cos((i*2*np.pi)/number_of_points),outer_factor*np.sin((i*2*np.pi)/number_of_points), outer_factor*np.cos((i*np.pi)/(number_of_points))])
-        inter_points.append([inter_facotr*np.cos((i*2*np.pi)/number_of_points),inter_facotr*np.sin((i*2*np.pi)/number_of_points), inter_facotr*np.cos((i*np.pi)/(number_of_points))])
-        
-    print(outer_points)
-    print(inter_points)
+        for k in range(number_of_points):
+            outer_points.append([outer_factor*np.cos(k*m)*np.sin(i*m), outer_factor*np.sin(k*m)*np.sin(i*m), outer_factor*np.cos(i*m)])
+            inter_points.append([inter_facotr*np.cos(k*m)*np.sin(i*m), inter_facotr*np.sin(k*m)*np.sin(i*m), inter_facotr*np.cos(i*m)])
 
     # mesh faces
     # the number of faces will depend on what the cell shape that exist 
     square = 6/8
-    number_of_faces = int(number_of_faces * square)
+    number_of_faces = int(number_of_points * square)
+    top_faces = []
+    bottom_faces = []
+    sides_1 = []
+    sides_2 = []
 
-    faces = np.hstack([])
+    vista.PolyData
+
+    #faces = np.hstack([])
 
 
-    return 0
+    return outer_points
