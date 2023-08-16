@@ -38,7 +38,7 @@ def sphere():
     Remember that cell is a factor of points to faces
     '''
     # mesh points
-    number_of_points = 100
+    number_of_points = 10
     outer_factor = 1
     inter_facotr = 0.95
     outer_points = []
@@ -49,6 +49,8 @@ def sphere():
         for k in range(number_of_points):
             outer_points.append([outer_factor*np.cos(k*m)*np.sin(i*m), outer_factor*np.sin(k*m)*np.sin(i*m), outer_factor*np.cos(i*m)])
             inter_points.append([inter_facotr*np.cos(k*m)*np.sin(i*m), inter_facotr*np.sin(k*m)*np.sin(i*m), inter_facotr*np.cos(i*m)])
+    
+    points = outer_points + inter_points
 
     # mesh faces
     # the number of faces will depend on what the cell shape that exist 
@@ -59,9 +61,16 @@ def sphere():
     sides_1 = []
     sides_2 = []
 
-    vista.PolyData
 
-    #faces = np.hstack([])
+    f = 0
+    while f < number_of_points:
+        sides_1.append([4,f,f+1,f+number_of_points,f+number_of_points+1])
+        f+=2
 
 
-    return outer_points
+    faces = np.hstack(sides_1)
+
+    surf = vista.PolyData(points,faces)
+
+
+    return surf

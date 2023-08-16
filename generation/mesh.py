@@ -32,7 +32,7 @@ class Mesh():
         try: 
             vista.examples.cells.plot_cell(self.mesh)
         except:
-            self.mesh.plot(scalars=np.arange(100),
+            self.mesh.plot(scalars=np.arange(10),
                 cpos=[-1, 1, 0.5],
                 show_scalar_bar=False,
                 show_edges=True,
