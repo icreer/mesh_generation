@@ -69,6 +69,7 @@ def sphere():
     for i in range(number_of_points**2):
         top_faces.append([4,i,i+1,i+number_of_points+1,i+number_of_points])
         bottom_faces.append([4,i+len(outer_points),i+1+len(outer_points),i+number_of_points+1+len(outer_points),i+number_of_points+len(outer_points)])
+        sides_2.append([4, i, i+len(outer_points), i+len(outer_points)+number_of_points, i+number_of_points])
 
     f = 0
     while f < number_of_points**2:
@@ -77,7 +78,9 @@ def sphere():
 
 
 
-    faces = np.hstack(sides_1+top_faces+bottom_faces)
+    faces = np.hstack(sides_1 + top_faces + bottom_faces + sides_2)
+
+    cells = [8] + list(range(len(points)))
 
     surf = vista.PolyData(points,faces)
 
