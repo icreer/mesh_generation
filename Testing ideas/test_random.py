@@ -9,8 +9,17 @@ m = 2*np.pi / number_of_points # multiplication factor
 
 for i in range(number_of_points):
     for k in range(number_of_points):
-        outer_points.append([outer_factor*np.cos(k*m)*np.sin(i*m), outer_factor*np.sin(k*m)*np.sin(i*m), outer_factor*np.cos(i*m)])
-        inter_points.append([inter_facotr*np.cos(k*m)*np.sin(i*m), inter_facotr*np.sin(k*m)*np.sin(i*m), inter_facotr*np.cos(i*m)])
+        x = np.cos(k*m)*np.sin(i*m)
+        y = np.sin(k*m)*np.sin(i*m)
+        z = np.cos(i*m)
+
+        outer_points.append([outer_factor*x, outer_factor*y, outer_factor*z])
+        inter_points.append([inter_facotr*x, inter_facotr*y, inter_facotr*z])
+
+ 
+# Check if there is duplicates
+
+
 
 points = outer_points + inter_points
 
