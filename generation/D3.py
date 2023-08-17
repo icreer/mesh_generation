@@ -40,7 +40,7 @@ def sphere():
     # mesh points
     number_of_points = 10
     outer_factor = 1
-    inter_facotr = 0.5
+    inter_facotr = 0.95
     outer_points = []
     inter_points = []
     m = 2*np.pi / number_of_points # multiplication factor 
