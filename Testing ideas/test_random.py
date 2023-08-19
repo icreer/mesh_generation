@@ -13,8 +13,8 @@ for i in range(number_of_points):
         y = np.sin(k*m)*np.sin(i*m)
         z = np.cos(i*m)
 
-        outer_points.append([outer_factor*x, outer_factor*y, outer_factor*z])
-        inter_points.append([inter_facotr*x, inter_facotr*y, inter_facotr*z])
+        outer_points.append([outer_factor * x, outer_factor * y, outer_factor * z])
+        inter_points.append([inter_facotr * x, inter_facotr * y, inter_facotr * z])
 
  
 # Check if there is duplicates
